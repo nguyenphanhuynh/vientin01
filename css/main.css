@@ -265,3 +265,7 @@ div.breadcrumbs span
 {
 	color:red;
 }
+
+body > div.container {
+    padding: 0px;
+}
