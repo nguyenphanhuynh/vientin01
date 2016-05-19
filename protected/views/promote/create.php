@@ -32,18 +32,6 @@ $errorClass = count($errors) > 0 ? "error" : "";
         <div class="error">
             <?php echo $errors[0];?>
         </div>
-
-            <form action="" method="POST">
-                User: <textarea style="width: 250px;" type="text" name="User">{"name":"John", "surname":"Doe", "gender":"Male", "username":"john_user", "email":"example@example.com"}</textarea>
-                <br/><br/>
-                Tenant: <textarea style="width: 250px;" type="text" name="Tenant">{"id":367}</textarea>
-                <br/><br/>
-                Wifi Area: <textarea style="width: 250px;" type="text" name="WifiArea"></textarea>
-                <br/><br/>
-                Parameters: <textarea style="width: 250px;" type="text" name="Parameters"></textarea>
-                <br/><br/>
-                <input type="submit" value="submit">
-            </form>
         <?php } ?>
     </div>
     <div class="col-sm-4 col-lg-3 col-xs-1"></div>

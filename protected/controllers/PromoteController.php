@@ -20,7 +20,7 @@ class PromoteController extends Controller
         $errors = [];
         //$promoteCodeParams = $_POST['PromoteCodes'];
         $promoteCodeParams = $_POST;
-        if (isset($promoteCodeParams['User'])) {
+        if (!empty($promoteCodeParams['User'])) {
             $model->setAttribute("user_info", $promoteCodeParams['User']);
         } else {
             $errors[] = "Thiếu tham số 'User'";
@@ -69,6 +69,15 @@ class PromoteController extends Controller
             'errors' => $errors
         ));
 	}
+
+    public function actionNew()
+    {
+        $model = new PromoteCodes();
+
+        $this->render('new', array(
+            'model' => $model
+        ));
+    }
 
     public function actionView()
     {
