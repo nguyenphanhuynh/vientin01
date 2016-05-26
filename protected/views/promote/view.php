@@ -39,14 +39,14 @@
                     </div>
                 </div>
                 <!-- Discount -->
-                <div class="discount row-info">
+                <!--<div class="discount row-info">
                     <div class="left-col col-lg-2 col-md-2 col-sm-4  col-xs-12">
                         Discount:
                     </div>
                     <div class="right-col col-lg-10 col-md-10 col-sm-8  col-xs-12">
                         <?php echo $model->discount;?>
                     </div>
-                </div>
+                </div>-->
                 <!-- User -->
                 <div class="user-info row-info">
                     <div class="left-col col-lg-2 col-md-2 col-sm-4  col-xs-12">

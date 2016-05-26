@@ -17,7 +17,7 @@ class PromoteController extends Controller
 
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
-        $errors = [];
+        $errors = array();
         //$promoteCodeParams = $_POST['PromoteCodes'];
         $promoteCodeParams = $_POST;
         if (!empty($promoteCodeParams['User'])) {
