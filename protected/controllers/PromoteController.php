@@ -21,21 +21,21 @@ class PromoteController extends Controller
         //$promoteCodeParams = $_POST['PromoteCodes'];
         $promoteCodeParams = $_POST;
         if (!empty($promoteCodeParams['User'])) {
-            $model->setAttribute("user_info", $promoteCodeParams['User']);
+            $model->setAttribute("user_info", json_encode($promoteCodeParams['User']));
         } else {
             $errors[] = "Thiếu tham số 'User'";
         }
         if (isset($promoteCodeParams['Tenant'])) {
-            $model->setAttribute("tenant_info", $promoteCodeParams['Tenant']);
+            $model->setAttribute("tenant_info", json_encode($promoteCodeParams['Tenant']));
         }
         if (isset($promoteCodeParams['WifiArea'])) {
-            $model->setAttribute("wifi_area", $promoteCodeParams['WifiArea']);
+            $model->setAttribute("wifi_area", json_encode($promoteCodeParams['WifiArea']));
         }
         if (isset($promoteCodeParams['Parameters'])) {
-            $model->setAttribute("parameters", $promoteCodeParams['Parameters']);
+            $model->setAttribute("parameters", json_encode($promoteCodeParams['Parameters']));
         }
         if (isset($promoteCodeParams['Discount'])) {
-            $model->setAttribute("discount", $promoteCodeParams['Discount']);
+            $model->setAttribute("discount", json_encode($promoteCodeParams['Discount']));
         } else {
             $model->setAttribute("discount", "20%");
         }
