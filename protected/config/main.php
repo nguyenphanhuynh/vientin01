@@ -22,7 +22,8 @@ return array(
         'application.modules.rights.components.*',
     ),
 
-    'defaultController' => 'index',
+//    'defaultController' => 'index',
+    'defaultController' => 'promote/view',
 
     'modules' => array(
         'gii' => array(
