@@ -82,7 +82,7 @@ class PromoteController extends Controller
     public function actionView()
     {
         if(Yii::app()->user->isGuest) {
-            $this->redirect('site/login');
+            $this->redirect('index.php/site/login');
         }
         $code = "";
         if (isset($_GET['code'])) {

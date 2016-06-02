@@ -93,7 +93,7 @@ return array(
             'class' => 'RWebUser',
             // enable cookie-based authentication
             'allowAutoLogin' => true,
-            'loginUrl' => array('/site/login'),
+            'loginUrl' => array('site/login'),
         ),
         'authManager' => array(
             'class'=>'RDbAuthManager',
@@ -124,10 +124,12 @@ return array(
         ),
         'urlManager' => array(
             'urlFormat' => 'path',
+            'showScriptName'=>false,
             'rules' => array(
                 'post/<id:\d+>/<title:.*?>' => 'post/view',
                 'posts/<tag:.*?>' => 'post/index',
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                '~<view:\w+'=>'site/page',
             ),
         ),
         'log' => array(
