@@ -261,3 +261,10 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2016-05-26 19:59:39
+
+
+CREATE TABLE `tbl_requests` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `content` VARCHAR(8000) NULL,
+  `posted_date` DATETIME NULL,
+  PRIMARY KEY (`id`));
