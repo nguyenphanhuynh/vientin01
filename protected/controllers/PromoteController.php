@@ -4,6 +4,16 @@ class PromoteController extends Controller
 {
 	public function actionCreate()
 	{
+        if(Yii::app()->request->isPostRequest)
+        {
+            // log this post
+            $request = new Requests();
+            $request->content = json_encode($_POST);
+            $request->posted_date = date('Y/m/d H:m:i');
+            $request->save();
+            // logged
+        }
+
 		$model = new PromoteCodes();
 
         /*
