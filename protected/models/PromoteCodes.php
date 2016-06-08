@@ -161,8 +161,10 @@ class PromoteCodes extends CActiveRecord
         if (!empty($data)) {
             try {
                 $data = json_decode($data, true);
-                foreach ($data as $key => $value) {
-                    $html .= '<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">' . $key . ': </div><div class="blue col-lg-10 col-md-10 col-sm-8 col-xs-8">' . $value . '</div><br/>';
+                if(is_array($data)) {
+                    foreach ($data as $key => $value) {
+                        $html .= '<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">' . $key . ': </div><div class="blue col-lg-10 col-md-10 col-sm-8 col-xs-8">' . $value . '</div><br/>';
+                    }
                 }
             } catch (Exception $ex) {
 
