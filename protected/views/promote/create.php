@@ -4,6 +4,9 @@
 
 $errorClass = count($errors) > 0 ? "error" : "";
 ?>
+<SCRIPT language="javascript">
+    j4wi.service('NewCoupon');
+</SCRIPT>
 <div class="row">
     <div class="col-lg-4 col-md-4 col-sm-3  col-xs-1"></div>
     <div class="coupon-content <?php echo $errorClass;?> col-lg-4 col-md-4 col-sm-6  col-xs-10">

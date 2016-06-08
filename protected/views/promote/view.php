@@ -44,7 +44,7 @@
                         Discount:
                     </div>
                     <div class="right-col col-lg-10 col-md-10 col-sm-8  col-xs-12">
-                        <?php echo $model->discount;?>
+                        <?php //echo $model->discount;?>
                     </div>
                 </div>-->
                 <!-- User -->
